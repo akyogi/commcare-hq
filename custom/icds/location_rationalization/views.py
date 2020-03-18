@@ -21,9 +21,6 @@ from custom.icds.location_rationalization.download import (
     RequestTemplateDownload,
 )
 from custom.icds.location_rationalization.dumper import Dumper
-from custom.icds.location_rationalization.forms import (
-    LocationRationalizationTemplateForm,
-)
 from custom.icds.location_rationalization.parser import Parser
 
 
@@ -52,6 +49,7 @@ class LocationRationalizationView(BaseDomainView):
         })
         context.update({
             'bulk_upload_form': get_bulk_upload_form(context),
+            'loc_types': self._location_types,
         })
         return context
 
