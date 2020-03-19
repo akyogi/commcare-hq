@@ -81,7 +81,7 @@ class ReportFixturesProvider(FixtureProvider):
         apps = self._get_apps(restore_state, restore_user)
         fixtures = []
 
-        needed_versions = MOBILE_UCR_MIGRATING_TO_2
+        needed_versions = set([MOBILE_UCR_MIGRATING_TO_2])
 
         report_data_cache = ReportDataCache()
         providers = [
